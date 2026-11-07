@@ -1,0 +1,25 @@
+<main class="card">
+  <h1>{{ title }}</h1>
+
+  <form (ngSubmit)="add()" class="add">
+    <input name="text" [(ngModel)]="newText" placeholder="Novi zadatak..." autocomplete="off" />
+    <button type="submit">Dodaj</button>
+  </form>
+
+  @if (tasks().length === 0) {
+    <p class="empty">Nema zadataka.</p>
+  } @else {
+    <ul>
+      @for (t of tasks(); track t.id) {
+        <li [class.done]="t.done">
+          <label>
+            <input type="checkbox" [checked]="t.done" (change)="toggle(t.id)" />
+            <span>{{ t.text }}</span>
+          </label>
+          <button class="del" (click)="remove(t.id)" aria-label="Obriši">✕</button>
+        </li>
+      }
+    </ul>
+    <p class="count">Preostalo: {{ remaining() }} / {{ tasks().length }}</p>
+  }
+</main>
