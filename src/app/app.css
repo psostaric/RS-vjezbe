@@ -11,3 +11,4 @@ li.done span { text-decoration: line-through; color: #999; }
 .del { background: transparent; color: #c62828; padding: .2rem .5rem; }
 .del:hover { background: #ffebee; }
 .empty, .count { color: #666; text-align: center; }
+.error { color: #c62828; text-align: center; }
