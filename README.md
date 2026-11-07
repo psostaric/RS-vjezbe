@@ -8,3 +8,5 @@ Jednostavna Angular aplikacija (popis zadataka).
     npx http-server dist/frontend-app/browser   # posluživanje statičnog sadržaja
 
 Razvojni način: `npm start`.
+
+URL na deployanu Render aplikaciju: https://rs-vjezbe-76ww.onrender.com. 
